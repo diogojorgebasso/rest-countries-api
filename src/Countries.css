@@ -1,5 +1,6 @@
 .countries {
   display: grid;
+  text-align: center;
   box-sizing: content-box;
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }

@@ -5,13 +5,11 @@ export default function Search() {
   function filterContinent() {
     //pass to App.js filter
   }
+
   return (
     <div className="Search">
-      <input type="text" />
-      <form>
-        <label class="sr-only" for="continents">
-          Choose a continent to filter:
-        </label>
+      <input type="text" placeholder="Search for a country..." />
+      <form aria-label="Choose a continent to filter:">
         <select name="continents" id="continents">
           <option value="Africa">Africa</option>
           <option value="America">America</option>
