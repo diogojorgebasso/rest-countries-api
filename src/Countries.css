@@ -1,10 +1,11 @@
 .countries {
-  display: flex;
+  display: grid;
   box-sizing: content-box;
-  width: 100%;
-  flex-direction: row;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 .countrieBox {
-  box-sizing: inherit;
-  width: 100%;
+  background-color: white;
+}
+img {
+  object-fit: contain;
 }
