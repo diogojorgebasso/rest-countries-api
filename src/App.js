@@ -1,18 +1,27 @@
 import Header from "./Header";
 import Search from "./Search";
 import Countries from "./Countries";
-
+import Atributions from "./Atributions";
+import Countrie from "./Countrie";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 function App() {
   return (
-    <div className="App">
-      <Header></Header>
-      <Search />
-      <Countries></Countries>
-      <div className="atributions">
-        Made by <a href="https://github.com/diogojorgebasso">Diogo Basso</a> for
-        <a href="frontendmentor.io">Frontend Mentor</a>
+    <Router>
+      <div className="App">
+        <Header />
+        <Switch>
+          <Route path="/:id">
+            <Countrie />
+          </Route>
+          <Route path="/">
+            {/*Make sure it  s the last one*/}
+            <Search />
+            <Countries />
+            <Atributions />
+          </Route>
+        </Switch>
       </div>
-    </div>
+    </Router>
   );
 }
 

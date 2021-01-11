@@ -36,7 +36,7 @@ export default function Countries() {
               height={250}
               alt={`Flag of ${item.name}`}
             />
-            <Link>
+            <Link to={"/" + item.name}>
               <h1>{item.name}</h1>
             </Link>
             <p>Population: {item.population}</p>
