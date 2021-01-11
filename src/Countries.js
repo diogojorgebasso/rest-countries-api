@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import "./Countries.css";
+import { Link } from "react-router-dom";
 
 export default function Countries() {
   const [error, setError] = useState(null);
-
   const [countries, setCountries] = useState([]);
   const [isLoaded, setIsLoaded] = useState(false);
   useEffect(() => {
@@ -36,7 +36,9 @@ export default function Countries() {
               height={250}
               alt={`Flag of ${item.name}`}
             />
-            <h1>{item.name}</h1>
+            <Link>
+              <h1>{item.name}</h1>
+            </Link>
             <p>Population: {item.population}</p>
             <p>Region: {item.region}</p>
             <p>Capital: {item.capital}</p>
