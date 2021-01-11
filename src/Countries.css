@@ -1,0 +1,10 @@
+.countries {
+  display: flex;
+  box-sizing: content-box;
+  width: 100%;
+  flex-direction: row;
+}
+.countrieBox {
+  box-sizing: inherit;
+  width: 100%;
+}
