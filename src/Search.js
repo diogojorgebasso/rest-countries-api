@@ -9,7 +9,7 @@ export default function Search() {
     <div className="Search">
       <input type="text" />
       <form>
-        <label class="src-only" for="continents">
+        <label class="sr-only" for="continents">
           Choose a continent to filter:
         </label>
         <select name="continents" id="continents">
