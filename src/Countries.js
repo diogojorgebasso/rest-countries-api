@@ -29,11 +29,11 @@ export default function Countries() {
     return (
       <div className="countries">
         {countries.map((item) => (
-          <div key={item.name} class="countrieBox" id={item.name}>
+          <div key={item.name} className="countrieBox" id={item.name}>
             <img
               src={item.flag}
-              width={300}
-              height={300}
+              width={250}
+              height={250}
               alt={`Flag of ${item.name}`}
             />
             <h1>{item.name}</h1>
