@@ -37,30 +37,51 @@ export default function Countrie() {
                     Native Name:{" "}
                     <span className="InfoAPI">{item.nativeName}</span>
                   </p>
-                  <p key={index}>Population: {item.population}</p>
-                  <p key={index}>Region: {item.region}</p>
-                  <p key={index}>Sub Region: {item.subregion}</p>
-                  <p key={index}>Capital: {item.capital}</p>
+                  <p key={index}>
+                    Population:{" "}
+                    <span className="InfoAPI">
+                      {new Intl.NumberFormat().format(item.population)}
+                    </span>
+                  </p>
+                  <p key={index}>
+                    Region:<span className="InfoAPI">{item.region}</span>
+                  </p>
+                  <p key={index}>
+                    Sub Region:{" "}
+                    <span className="InfoAPI">{item.subregion}</span>
+                  </p>
+                  <p key={index}>
+                    Capital:<span className="InfoAPI">{item.capital}</span>
+                  </p>
                 </div>
                 <div className="innerRight">
                   <p key={index}>
-                    Top Level Domain: {item.topLevelDomain.map((obj) => obj)}
+                    Top Level Domain:{" "}
+                    {item.topLevelDomain.map((obj) => (
+                      <span className="InfoAPI">{obj}</span>
+                    ))}
                   </p>
                   <p key={index}>
-                    Currencies:{item.currencies.map((obj) => obj.name + ", ")}
+                    Currencies:
+                    {item.currencies.map((obj) => (
+                      <span className="InfoAPI">{obj.name + ", "}</span>
+                    ))}
                   </p>
                   <p key={index}>
-                    Languages: {item.languages.map((obj) => obj.name + ", ")}
+                    Languages:{" "}
+                    {item.languages.map((obj) => (
+                      <span className="InfoAPI">{obj.name + ", "}</span>
+                    ))}
                   </p>
                 </div>
               </div>
               <div id="borders" key={index}>
-                Border Countries:{" "}
+                Border Countries:
                 {item.borders.map((borderCountry) => (
                   <a href={"/" + borderCountry}>
                     <button>{borderCountry}</button>
                   </a>
-                ))}
+                )) || "No borders found."}
               </div>
             </div>
           </div>

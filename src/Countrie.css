@@ -6,6 +6,7 @@
   flex-direction: column;
 }
 .InfoAPI {
+  font-weight: 600;
 }
 
 #wrapper {
