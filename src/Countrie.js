@@ -16,42 +16,52 @@ export default function Countrie() {
     <div className="countrie">
       {country.map((item, index) => (
         <>
-          <div className="Left">
-            <a href="/">
-              <button> &lt;--Go Back</button>
-            </a>
-            <img src={item.flag} alt={"Bandeira do país" + item.name} />
-          </div>
-          <div className="Right">
-            <h1 className="">{pais}</h1>
-
-            <div id="wrapper">
-              <div className="innerLeft">
-                <p key={index}>Native Name: {item.nativeName}</p>
-                <p key={index}>Population: {item.population}</p>
-                <p key={index}>Region: {item.region}</p>
-                <p key={index}>Sub Region: {item.subregion}</p>
-                <p key={index}>Capital: {item.capital}</p>
-              </div>
-              <div className="innerRight">
-                <p key={index}>
-                  Top Level Domain: {item.topLevelDomain.map((obj) => obj)}
-                </p>
-                <p key={index}>
-                  Currencies:{item.currencies.map((obj) => obj.name + ", ")}
-                </p>
-                <p key={index}>
-                  Languages: {item.languages.map((obj) => obj.name + ", ")}
-                </p>
-              </div>
+          <a href="/">
+            <button className="backButton">&#x2190;Go Back</button>
+          </a>
+          <div class="countryInfo">
+            <div className="Left">
+              <img
+                src={item.flag}
+                width={500}
+                height={500}
+                alt={"Bandeira do país " + item.name}
+              />
             </div>
-            <div id="borders" key={index}>
-              Border Countries:{" "}
-              {item.borders.map((borderCountry) => (
-                <a href={"/" + borderCountry}>
-                  <button>{borderCountry}</button>
-                </a>
-              ))}
+            <div className="Right">
+              <h1>{pais}</h1>
+
+              <div id="wrapper">
+                <div className="innerLeft">
+                  <p key={index}>
+                    Native Name:{" "}
+                    <span className="InfoAPI">{item.nativeName}</span>
+                  </p>
+                  <p key={index}>Population: {item.population}</p>
+                  <p key={index}>Region: {item.region}</p>
+                  <p key={index}>Sub Region: {item.subregion}</p>
+                  <p key={index}>Capital: {item.capital}</p>
+                </div>
+                <div className="innerRight">
+                  <p key={index}>
+                    Top Level Domain: {item.topLevelDomain.map((obj) => obj)}
+                  </p>
+                  <p key={index}>
+                    Currencies:{item.currencies.map((obj) => obj.name + ", ")}
+                  </p>
+                  <p key={index}>
+                    Languages: {item.languages.map((obj) => obj.name + ", ")}
+                  </p>
+                </div>
+              </div>
+              <div id="borders" key={index}>
+                Border Countries:{" "}
+                {item.borders.map((borderCountry) => (
+                  <a href={"/" + borderCountry}>
+                    <button>{borderCountry}</button>
+                  </a>
+                ))}
+              </div>
             </div>
           </div>
         </>
