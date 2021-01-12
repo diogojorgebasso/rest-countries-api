@@ -57,19 +57,19 @@ export default function Countrie() {
                 <div className="innerRight">
                   <p key={index}>
                     Top Level Domain:{" "}
-                    {item.topLevelDomain.map((obj) => (
+                    {item.topLevelDomain?.map((obj) => (
                       <span className="InfoAPI">{obj}</span>
                     ))}
                   </p>
                   <p key={index}>
                     Currencies:
-                    {item.currencies.map((obj) => (
+                    {item.currencies?.map((obj) => (
                       <span className="InfoAPI">{obj.name + ", "}</span>
                     ))}
                   </p>
                   <p key={index}>
                     Languages:{" "}
-                    {item.languages.map((obj) => (
+                    {item.languages?.map((obj) => (
                       <span className="InfoAPI">{obj.name + ", "}</span>
                     ))}
                   </p>
@@ -77,7 +77,7 @@ export default function Countrie() {
               </div>
               <div id="borders" key={index}>
                 Border Countries:
-                {item.borders.map((borderCountry) => (
+                {item.borders?.map((borderCountry) => (
                   <a href={"/" + borderCountry}>
                     <button>{borderCountry}</button>
                   </a>
