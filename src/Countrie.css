@@ -1,0 +1,19 @@
+.countrie {
+  display: flex;
+  width: 100%;
+}
+.Left {
+  flex-direction: column;
+}
+.Left > a {
+}
+#wrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+.Right {
+  margin: 2em;
+}
+.innerRight {
+  margin-right: auto;
+}

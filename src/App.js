@@ -10,7 +10,7 @@ function App() {
       <div className="App">
         <Header />
         <Switch>
-          <Route path="/:id">
+          <Route path="/:pais">
             <Countrie />
           </Route>
           <Route path="/">
